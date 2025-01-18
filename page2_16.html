@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script>
+  var x = 0;
+  const myInterval = setInterval(myTimer, 5);
+  function myTimer() {
+    try{
+      console.log(window.opener.location.href);
+    }
+    catch(err){
+      console.log(err);
+      x++;
+    }
+    if(x==1000){alert("it stopped"); myStopFunction();}
+  }
+  function myStopFunction() {
+    clearInterval(myInterval);
+  }
+</script>
+</body>
+</html>
